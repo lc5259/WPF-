@@ -98,21 +98,270 @@
                 </RadioButton>
             </UniformGrid>
         </Grid>
-        
+
         <!--头像区域-->
-        <StackPanel Grid.Column="1">
-            <TextBlock FontSize="20" HorizontalAlignment="Center">头像</TextBlock>
+        <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <Image  Source="/images/Image1.jpg" Width="50" Height="50" Stretch="Fill">
+                <Image.Clip>
+                    <EllipseGeometry RadiusX="25" RadiusY="25" Center="25,25"/>
+                </Image.Clip>
+            </Image>
+            <StackPanel VerticalAlignment="Center" Margin="10">
+                <TextBlock FontSize="14" HorizontalAlignment="Center" FontWeight="Black">Naved Mirza</TextBlock>
+                <TextBlock FontSize="12" HorizontalAlignment="Center">Admin</TextBlock>
+            </StackPanel>
+
         </StackPanel>
-        
+
         <!--主体内容区域-->
-        <Grid Grid.Row="1">
-            <TextBlock FontSize="20"> 主体内容</TextBlock>
+        <Grid Grid.Row="1" Background="#f5f6fa" >
+            <Grid.RowDefinitions >
+                <RowDefinition ></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Margin="30 20 30 20" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock  FontSize="18" Foreground="#88949A" VerticalAlignment="Center">Message Data</TextBlock>
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border Width="80" Height="25"   BorderThickness="1" BorderBrush="#A4ADB2" CornerRadius="10" Margin="0 0 30 0">
+                        <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center">DAY</TextBlock>
+                    </Border>
+                    <Border Width="80" Height="25"   BorderThickness="1" BorderBrush="#A4ADB2" CornerRadius="10" Margin="0 0 30 0">
+                        <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center">MONTH</TextBlock>
+                    </Border>
+                    <Border Width="80" Height="25"   BorderThickness="1" BorderBrush="#A4ADB2" CornerRadius="10" Margin="0 0 30 0">
+                        <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center">YEAR</TextBlock>
+                    </Border>
+                </StackPanel>
+                <UniformGrid  Grid.Row="1" Columns="3"  >
+
+                    <Grid>
+                        <!--底层阴影-->
+                        <Border Background="#FF7000" Margin="50 20 50 20">
+                            <Border.Effect>
+                                <DropShadowEffect Color="#FF7000" ShadowDepth="30" BlurRadius="50" Opacity="0.8" Direction="270"/>
+                            </Border.Effect>
+                        </Border>
+
+                        <Border CornerRadius="10" Background="#FF7000" Margin="10 0 10 0">
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Border BorderThickness="1" Height="1" BorderBrush="#EBEBEB" VerticalAlignment="Center" Grid.RowSpan="2"></Border>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Border Width="35" Height="35"  Background="White" CornerRadius="35" Opacity="0.2"></Border>
+
+                                    <TextBlock FontFamily="Fonts/#iconfont" Text="&#xe521;" Foreground="White" HorizontalAlignment="Center"
+                                       VerticalAlignment="Center" FontSize="22"
+                                       ></TextBlock>
+
+                                    <TextBlock Text="Started sending at" Grid.Column="1" Foreground="White" VerticalAlignment="Center"/>
+                                </Grid>
+
+                                <Border  Grid.Row="1">
+                                    <StackPanel VerticalAlignment="Center" Margin="15 0 0 0">
+                                        <TextBlock FontSize="22" Foreground="White"> Decemeber 05th's 19</TextBlock>
+                                        <TextBlock Foreground="White">Decemeber 05th's 19</TextBlock>
+                                    </StackPanel>
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+                    <Grid>
+                        <!--底层阴影-->
+                        <Border Background="#ffc000" Margin="50 20 50 20">
+                            <Border.Effect>
+                                <DropShadowEffect Color="#ffc000" ShadowDepth="30" BlurRadius="50" Opacity="0.8" Direction="270"/>
+                            </Border.Effect>
+                        </Border>
+
+                        <Border Background="#ffc000" Margin="10 0 10 0" CornerRadius="10">
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Border BorderThickness="1" Height="1" BorderBrush="#EBEBEB" VerticalAlignment="Center" Grid.RowSpan="2"></Border>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Border Width="35" Height="35"  Background="White" CornerRadius="35" Opacity="0.2"></Border>
+
+                                    <TextBlock FontFamily="Fonts/#iconfont" Text="&#xe601;" Foreground="White" HorizontalAlignment="Center"
+                   VerticalAlignment="Center" FontSize="22"
+                   ></TextBlock>
+
+                                    <TextBlock Text="Completed" Grid.Column="1" Foreground="White" VerticalAlignment="Center"/>
+                                </Grid>
+
+                                <Border  Grid.Row="1">
+                                    <StackPanel VerticalAlignment="Center" Margin="15 0 0 0">
+                                        <TextBlock FontSize="22" Foreground="White"> In 51.28</TextBlock>
+                                        <TextBlock Foreground="White">seconds</TextBlock>
+                                    </StackPanel>
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+
+                    <Grid>
+                        <!--底层阴影-->
+                        <Border Background="#5ae5b3" Margin="50 20 50 20">
+                            <Border.Effect>
+                                <DropShadowEffect Color="#5ae5b3" ShadowDepth="30" BlurRadius="50" Opacity="0.8" Direction="270"/>
+                            </Border.Effect>
+                        </Border>
+                        <Border Background="#5ae5b3" Margin="10 0 10 0">
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Border BorderThickness="1" Height="1" BorderBrush="#EBEBEB" VerticalAlignment="Center" Grid.RowSpan="2"></Border>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Border Width="35" Height="35"  Background="White" CornerRadius="35" Opacity="0.2"></Border>
+
+                                    <TextBlock FontFamily="Fonts/#iconfont" Text="&#xe69d;" Foreground="White" HorizontalAlignment="Center"
+                   VerticalAlignment="Center" FontSize="22"
+                   ></TextBlock>
+
+                                    <TextBlock Text="Total Messages" Grid.Column="1" Foreground="White" VerticalAlignment="Center"/>
+                                </Grid>
+
+                                <Border  Grid.Row="1">
+                                    <StackPanel VerticalAlignment="Center" Margin="15 0 0 0">
+                                        <TextBlock FontSize="22" Foreground="White"> Decemeber 05th's 16</TextBlock>
+                                        <TextBlock Foreground="White">99+</TextBlock>
+                                    </StackPanel>
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </UniformGrid>
+            </Grid>
+            <Grid Grid.Row="1" Margin="30 20 30 20">
+                <UniformGrid Columns="4">
+                    <Border Background="#ffffff"  Margin="20 0 0 0" CornerRadius="10" Grid.RowSpan="2">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="20" Color="DarkGray" Opacity="0.4" Direction="280" ShadowDepth="0" />
+                        </Border.Effect>
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition Height="3*"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Foreground="#596B75" FontSize="13" > GENDER</TextBlock>
+                            <Border Grid.Row="1" Width="100" Height="100" BorderBrush="#707070" CornerRadius="100" BorderThickness="3">
+                            </Border>
+
+                            <UniformGrid Grid.Row="2" Columns="2">
+                                <Border  BorderThickness="0 0 1 0" BorderBrush="DarkGray">
+                                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <TextBlock  FontSize="22" > 55%</TextBlock>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Border Background="#5ae5b3" Width="10" Height="10" ></Border>
+                                            <TextBlock Margin="5 0 0 2 ">MEN</TextBlock>
+                                        </StackPanel>
+                                        
+                                    </StackPanel>
+                                </Border>
+                                <Border  >
+                                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <TextBlock  FontSize="22" > 45%</TextBlock>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Border Background="#ff7800" Width="10" Height="10" ></Border>
+                                            <TextBlock Margin="5 0 0 2 ">MEN</TextBlock>
+                                        </StackPanel>
+
+                                    </StackPanel>
+                                </Border>
+
+                            </UniformGrid>
+                        </Grid>
+                    </Border>
+                    <Border Background="#ffffff"  Margin="20 0 0 0" CornerRadius="10" Grid.RowSpan="2">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="20" Color="DarkGray" Opacity="0.4" Direction="280" ShadowDepth="0" />
+                        </Border.Effect>
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition Height="3*"></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Foreground="#596B75" FontSize="13" > GENDER</TextBlock>
+                            <Border Grid.Row="1" Width="100" Height="100" BorderBrush="#707070" CornerRadius="100" BorderThickness="3">
+                            </Border>
+
+                            <UniformGrid Grid.Row="2" Columns="2">
+                                <Border  BorderThickness="0 0 1 0" BorderBrush="DarkGray">
+                                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <TextBlock  FontSize="22" > 55%</TextBlock>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Border Background="#5ae5b3" Width="10" Height="10" ></Border>
+                                            <TextBlock Margin="5 0 0 2 ">MEN</TextBlock>
+                                        </StackPanel>
+
+                                    </StackPanel>
+                                </Border>
+                                <Border  >
+                                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <TextBlock  FontSize="22" > 45%</TextBlock>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Border Background="#ff7800" Width="10" Height="10" ></Border>
+                                            <TextBlock Margin="5 0 0 2 ">MEN</TextBlock>
+                                        </StackPanel>
+
+                                    </StackPanel>
+                                </Border>
+
+                            </UniformGrid>
+                        </Grid>
+                    </Border>
+                    <Border Background="Red" Margin="10 0 0 0"></Border>
+                    <Border Background="Red" Margin="10 0 0 0"></Border>
+                    
+                </UniformGrid>
+            </Grid>
+            <Grid Grid.Row="2">
+                <TextBlock FontSize="20"> 内容3</TextBlock>
+            </Grid>
         </Grid>
-        
+
         <!--右侧用户栏-->
         <Grid Grid.Row="1" Grid.Column="1">
             <TextBlock FontSize="20" HorizontalAlignment="Center" > 用户栏</TextBlock>
         </Grid>
-        
+
     </Grid>
 </Window>
