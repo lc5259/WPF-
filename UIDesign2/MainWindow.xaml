@@ -546,11 +546,42 @@ VerticalAlignment="Top" Margin="0 0 5 0">
                 <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"> SEE ALL</TextBlock>
             </Border>
 
+            <ItemsControl Grid.Row="1" ItemsSource="{Binding UserModules}" >
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
 
-            <Grid Grid.Row="1">
-                
-            </Grid>
-            
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Grid.Row="1" Margin="0 20 0 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Width="10" Height="10" CornerRadius="10" Background="#59E6B5" 
+                        HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20 30 0 0"
+                        Panel.ZIndex="1"/>
+                            <Image Source="{Binding FilePath}" Width="40" Height="40" Stretch="Fill">
+                                <Image.Clip>
+                                    <EllipseGeometry RadiusX="20" RadiusY="20" Center="20,20"/>
+                                </Image.Clip>
+                            </Image>
+
+                            <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                <TextBlock Text="{Binding UserName}"/>
+                                <TextBlock Text="{Binding Content}" Foreground="#88949A"/>
+                            </StackPanel>
+
+                            <TextBlock Text="{Binding SignTime}" Foreground="#88949A" Grid.Column="2" VerticalAlignment="Center"/>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+
+            </ItemsControl>
             <Image Grid.Row="2" Source="Images/Background.png"/>
         </Grid>
         
